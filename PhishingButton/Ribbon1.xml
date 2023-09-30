@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabMail" visible="true">     <!-- "TabMail" is the default tab when you open Outlook -->
+        <group id="MyGroup" label="Phishing Button" visible="true">
+		  <button id="MyTabButton" size="large" onAction="PhishingButtonClicked"></button> 
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+
+  <contextMenus>
+    <contextMenu idMso="ContextMenuMailItem">  <!-- "ContextMenuMailItem" is the menu when you right-click on an email -->
+      <button id="MyContextMenuButton" label="Phishing Button" onAction="PhishingButtonClicked"/>
+    </contextMenu>
+  </contextMenus>
+</customUI>
+
